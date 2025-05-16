@@ -1,10 +1,12 @@
 # How to create 3D Bar Chart in WPF?
 
-This article explains about how to create a 3D Bar Chart in WPF. 
+This article explains about how to create a [3D Bar Chart](https://www.syncfusion.com/wpf-controls/charts/wpf-3d-bar-chart) in WPF. 
 
 You can create 3D bar chart in WPF by populating the items into ItemsSource of BarSeries3D series . In the following example, you will look at a grocery store. The chart displays the revenue generated from the production department.
  
 Populated items are the sales details which denotes the products and their revenue
+
+**Model**
  
 ``` 
 public class Sales
@@ -14,6 +16,8 @@ public class Sales
      public double Revenue { get; set; }
 }
 ``` 
+
+**ViewModel**
 
 ``` 
 public ViewModel()
@@ -28,6 +32,8 @@ public ViewModel()
 public ObservableCollection<Sales> GrowthDetails { get; set; }
 ```
  
+**XAML**
+
 ```
 <Syncfusion:SfChart3D x:Name="Chart"  Header="3D Bar Chart">
         <Syncfusion:SfChart3D.DataContext>
@@ -53,4 +59,10 @@ public ObservableCollection<Sales> GrowthDetails { get; set; }
 
 ![3D Bar chart in WPF](https://user-images.githubusercontent.com/53489303/200646561-26af5f1a-f427-4117-920d-75f6e5ddef2c.png)
 
-KB article - [How to create 3D Bar Chart in WPF](https://www.syncfusion.com/kb/11464/how-to-create-3d-bar-chart-in-wpf)
+## Troubleshooting
+
+#### Path too long exception
+
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
+
+For more details, refer to the KB on [How to create 3D Bar Chart in WPF](https://www.syncfusion.com/kb/11464/how-to-create-3d-bar-chart-in-wpf)
